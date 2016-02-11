@@ -1,14 +1,13 @@
-function displayInformation(obj) {
-     // var library is defined, use it to print the information
-    for (var i=0; i<obj.length; i++)
+function displayInformation() {
+    for (var i=0; i<library.length; i++)
         {
-        if (obj.readingStatus)
-            alert("Already read '" + obj[i].title + "' by" + obj[i].author + ".");
+        if (library[i].readingStatus)
+            console.log("Already read '" + library[i].title + "' by " + library[i].author + ".");
         else
-            alert("You still need to read '" + obj[i].title + "' by" + obj[i].author + ".");
+            console.log("You still need to read '" + library[i].title + "' by " + library[i].author + ".");
         }
+}
 
-// tail starts here
 var library = [ 
     {
         title: 'Bill Gates',
@@ -26,5 +25,4 @@ var library = [
         readingStatus: false
     }
 ];
-
-displayInformation(library);
+    displayInformation();
